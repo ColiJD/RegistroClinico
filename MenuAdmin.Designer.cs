@@ -1,0 +1,325 @@
+﻿namespace BitacoraLeo
+{
+    partial class MenuAdmin
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnTipoUsuario = new System.Windows.Forms.Button();
+            this.btnBitacora = new System.Windows.Forms.Button();
+            this.btnMarca = new System.Windows.Forms.Button();
+            this.btnModelo = new System.Windows.Forms.Button();
+            this.btnArticulos = new System.Windows.Forms.Button();
+            this.btnProveedor = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReporte = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.plSuperior = new System.Windows.Forms.Panel();
+            this.btnmin = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.plSuperior.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.Maroon;
+            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 149);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(150, 50);
+            this.btnUsuarios.TabIndex = 1;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnTipoUsuario
+            // 
+            this.btnTipoUsuario.BackColor = System.Drawing.Color.Maroon;
+            this.btnTipoUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTipoUsuario.ForeColor = System.Drawing.Color.White;
+            this.btnTipoUsuario.Location = new System.Drawing.Point(0, 199);
+            this.btnTipoUsuario.Name = "btnTipoUsuario";
+            this.btnTipoUsuario.Size = new System.Drawing.Size(150, 50);
+            this.btnTipoUsuario.TabIndex = 2;
+            this.btnTipoUsuario.Text = "Tipo Usuarios";
+            this.btnTipoUsuario.UseVisualStyleBackColor = false;
+            this.btnTipoUsuario.Click += new System.EventHandler(this.btnTipoUsuario_Click);
+            // 
+            // btnBitacora
+            // 
+            this.btnBitacora.BackColor = System.Drawing.Color.Maroon;
+            this.btnBitacora.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBitacora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBitacora.ForeColor = System.Drawing.Color.White;
+            this.btnBitacora.Location = new System.Drawing.Point(0, 249);
+            this.btnBitacora.Name = "btnBitacora";
+            this.btnBitacora.Size = new System.Drawing.Size(150, 50);
+            this.btnBitacora.TabIndex = 3;
+            this.btnBitacora.Text = "Bitacora";
+            this.btnBitacora.UseVisualStyleBackColor = false;
+            this.btnBitacora.Click += new System.EventHandler(this.btnBitacora_Click);
+            // 
+            // btnMarca
+            // 
+            this.btnMarca.BackColor = System.Drawing.Color.Maroon;
+            this.btnMarca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarca.ForeColor = System.Drawing.Color.White;
+            this.btnMarca.Location = new System.Drawing.Point(0, 299);
+            this.btnMarca.Name = "btnMarca";
+            this.btnMarca.Size = new System.Drawing.Size(150, 50);
+            this.btnMarca.TabIndex = 4;
+            this.btnMarca.Text = "Marca";
+            this.btnMarca.UseVisualStyleBackColor = false;
+            this.btnMarca.Click += new System.EventHandler(this.btnMarca_Click);
+            // 
+            // btnModelo
+            // 
+            this.btnModelo.BackColor = System.Drawing.Color.Maroon;
+            this.btnModelo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnModelo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModelo.ForeColor = System.Drawing.Color.White;
+            this.btnModelo.Location = new System.Drawing.Point(0, 349);
+            this.btnModelo.Name = "btnModelo";
+            this.btnModelo.Size = new System.Drawing.Size(150, 50);
+            this.btnModelo.TabIndex = 5;
+            this.btnModelo.Text = "Modelo";
+            this.btnModelo.UseVisualStyleBackColor = false;
+            this.btnModelo.Click += new System.EventHandler(this.btnModelo_Click);
+            // 
+            // btnArticulos
+            // 
+            this.btnArticulos.BackColor = System.Drawing.Color.Maroon;
+            this.btnArticulos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArticulos.ForeColor = System.Drawing.Color.White;
+            this.btnArticulos.Location = new System.Drawing.Point(0, 399);
+            this.btnArticulos.Name = "btnArticulos";
+            this.btnArticulos.Size = new System.Drawing.Size(150, 50);
+            this.btnArticulos.TabIndex = 6;
+            this.btnArticulos.Text = "Articulos";
+            this.btnArticulos.UseVisualStyleBackColor = false;
+            this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
+            // 
+            // btnProveedor
+            // 
+            this.btnProveedor.BackColor = System.Drawing.Color.Maroon;
+            this.btnProveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedor.ForeColor = System.Drawing.Color.White;
+            this.btnProveedor.Location = new System.Drawing.Point(0, 449);
+            this.btnProveedor.Name = "btnProveedor";
+            this.btnProveedor.Size = new System.Drawing.Size(150, 50);
+            this.btnProveedor.TabIndex = 7;
+            this.btnProveedor.Text = "Proveedor";
+            this.btnProveedor.UseVisualStyleBackColor = false;
+            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.Controls.Add(this.btnReporte);
+            this.panel1.Controls.Add(this.btnProveedor);
+            this.panel1.Controls.Add(this.btnArticulos);
+            this.panel1.Controls.Add(this.btnModelo);
+            this.panel1.Controls.Add(this.btnMarca);
+            this.panel1.Controls.Add(this.btnBitacora);
+            this.panel1.Controls.Add(this.btnTipoUsuario);
+            this.panel1.Controls.Add(this.btnUsuarios);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(150, 641);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.Color.Maroon;
+            this.btnReporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Location = new System.Drawing.Point(0, 499);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(150, 50);
+            this.btnReporte.TabIndex = 8;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Chocolate;
+            this.panel3.BackgroundImage = global::BitacoraLeo.Properties.Resources.logo;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(150, 149);
+            this.panel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.Location = new System.Drawing.Point(18, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(250, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Bienvenido Administrador";
+            // 
+            // plSuperior
+            // 
+            this.plSuperior.BackColor = System.Drawing.Color.Chocolate;
+            this.plSuperior.Controls.Add(this.btnmin);
+            this.plSuperior.Controls.Add(this.btnMax);
+            this.plSuperior.Controls.Add(this.label1);
+            this.plSuperior.Controls.Add(this.btnCerrar);
+            this.plSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.plSuperior.Location = new System.Drawing.Point(150, 0);
+            this.plSuperior.Name = "plSuperior";
+            this.plSuperior.Size = new System.Drawing.Size(802, 60);
+            this.plSuperior.TabIndex = 1;
+            this.plSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.plSuperior_Paint);
+            this.plSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plSuperior_MouseDown);
+            // 
+            // btnmin
+            // 
+            this.btnmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnmin.BackColor = System.Drawing.Color.Snow;
+            this.btnmin.BackgroundImage = global::BitacoraLeo.Properties.Resources.minimizar;
+            this.btnmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmin.ForeColor = System.Drawing.Color.White;
+            this.btnmin.Location = new System.Drawing.Point(688, 12);
+            this.btnmin.Name = "btnmin";
+            this.btnmin.Size = new System.Drawing.Size(30, 30);
+            this.btnmin.TabIndex = 4;
+            this.btnmin.UseVisualStyleBackColor = false;
+            this.btnmin.Click += new System.EventHandler(this.btnmin_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackColor = System.Drawing.Color.Snow;
+            this.btnMax.BackgroundImage = global::BitacoraLeo.Properties.Resources.maximizar;
+            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.ForeColor = System.Drawing.Color.White;
+            this.btnMax.Location = new System.Drawing.Point(724, 12);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(30, 30);
+            this.btnMax.TabIndex = 3;
+            this.btnMax.UseVisualStyleBackColor = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.Red;
+            this.btnCerrar.BackgroundImage = global::BitacoraLeo.Properties.Resources.cerrar;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(760, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(30, 30);
+            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.Color.White;
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(150, 60);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(802, 581);
+            this.panelDesktop.TabIndex = 4;
+            // 
+            // MenuAdmin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(952, 641);
+            this.Controls.Add(this.panelDesktop);
+            this.Controls.Add(this.plSuperior);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "MenuAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MenuAdmin";
+            this.Load += new System.EventHandler(this.MenuAdmin_Load);
+            this.panel1.ResumeLayout(false);
+            this.plSuperior.ResumeLayout(false);
+            this.plSuperior.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.Button btnTipoUsuario;
+        private System.Windows.Forms.Button btnBitacora;
+        private System.Windows.Forms.Button btnMarca;
+        private System.Windows.Forms.Button btnModelo;
+        private System.Windows.Forms.Button btnArticulos;
+        private System.Windows.Forms.Button btnProveedor;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel plSuperior;
+        private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Button btnmin;
+        private System.Windows.Forms.Button btnMax;
+        private System.Windows.Forms.Panel panelDesktop;
+    }
+}

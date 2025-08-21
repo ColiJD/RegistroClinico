@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetReporte" targetNamespace="http://tempuri.org/DataSetReporte.xsd" xmlns:mstns="http://tempuri.org/DataSetReporte.xsd" xmlns="http://tempuri.org/DataSetReporte.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ProductLPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProductLPConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BitacoraLeo.Properties.Settings.GlobalReference.Default.ProductLPConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BitacoraTableAdapter" GeneratorDataComponentClassName="BitacoraTableAdapter" Name="Bitacora" UserDataComponentName="BitacoraTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProductLPConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        B.Id_Ditacora, A.articulo_Nombre AS bitacora_Articulo, M.marca_Nombre AS bitacora_Marca, Mo.modelo_Nombre AS bitacora_Modelo, B.bitacora_Fecha, B.bitacora_Garantia, P.proveedor_Nombre AS bitacora_Proveedor, 
+                         DATEDIFF(DAY, GETDATE(), B.bitacora_Garantia) AS DiasRestantes
+FROM            Bitacora AS B INNER JOIN
+                         Articulo AS A ON B.bitacora_Articulo = A.id_Articulo INNER JOIN
+                         Marca AS M ON B.bitacora_Marca = M.id_Marca INNER JOIN
+                         Modelo AS Mo ON B.bitacora_Modelo = Mo.id_modelo INNER JOIN
+                         Proveedor AS P ON B.bitacora_Proveedor = P.id_Proveedor</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_Ditacora" DataSetColumn="Id_Ditacora" />
+              <Mapping SourceColumn="bitacora_Fecha" DataSetColumn="bitacora_Fecha" />
+              <Mapping SourceColumn="bitacora_Garantia" DataSetColumn="bitacora_Garantia" />
+              <Mapping SourceColumn="DiasRestantes" DataSetColumn="DiasRestantes" />
+              <Mapping SourceColumn="bitacora_Articulo" DataSetColumn="bitacora_Articulo" />
+              <Mapping SourceColumn="bitacora_Marca" DataSetColumn="bitacora_Marca" />
+              <Mapping SourceColumn="bitacora_Modelo" DataSetColumn="bitacora_Modelo" />
+              <Mapping SourceColumn="bitacora_Proveedor" DataSetColumn="bitacora_Proveedor" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetReporte" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetReporte" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetReporte">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Bitacora" msprop:Generator_RowClassName="BitacoraRow" msprop:Generator_RowEvHandlerName="BitacoraRowChangeEventHandler" msprop:Generator_RowDeletedName="BitacoraRowDeleted" msprop:Generator_RowDeletingName="BitacoraRowDeleting" msprop:Generator_RowEvArgName="BitacoraRowChangeEvent" msprop:Generator_TablePropName="Bitacora" msprop:Generator_RowChangedName="BitacoraRowChanged" msprop:Generator_UserTableName="Bitacora" msprop:Generator_RowChangingName="BitacoraRowChanging" msprop:Generator_TableClassName="BitacoraDataTable" msprop:Generator_TableVarName="tableBitacora">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_Ditacora" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id_Ditacora" msprop:Generator_ColumnPropNameInTable="Id_DitacoraColumn" msprop:Generator_ColumnPropNameInRow="Id_Ditacora" msprop:Generator_ColumnVarNameInTable="columnId_Ditacora" type="xs:int" />
+              <xs:element name="bitacora_Fecha" msprop:Generator_UserColumnName="bitacora_Fecha" msprop:Generator_ColumnPropNameInTable="bitacora_FechaColumn" msprop:Generator_ColumnPropNameInRow="bitacora_Fecha" msprop:Generator_ColumnVarNameInTable="columnbitacora_Fecha" type="xs:dateTime" />
+              <xs:element name="bitacora_Garantia" msprop:Generator_UserColumnName="bitacora_Garantia" msprop:Generator_ColumnPropNameInTable="bitacora_GarantiaColumn" msprop:Generator_ColumnPropNameInRow="bitacora_Garantia" msprop:Generator_ColumnVarNameInTable="columnbitacora_Garantia" type="xs:dateTime" />
+              <xs:element name="DiasRestantes" msdata:ReadOnly="true" msprop:Generator_UserColumnName="DiasRestantes" msprop:Generator_ColumnPropNameInTable="DiasRestantesColumn" msprop:Generator_ColumnPropNameInRow="DiasRestantes" msprop:Generator_ColumnVarNameInTable="columnDiasRestantes" type="xs:int" minOccurs="0" />
+              <xs:element name="bitacora_Articulo" msprop:Generator_ColumnPropNameInRow="bitacora_Articulo" msprop:Generator_ColumnPropNameInTable="bitacora_ArticuloColumn" msprop:Generator_ColumnVarNameInTable="columnbitacora_Articulo" msprop:Generator_UserColumnName="bitacora_Articulo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bitacora_Marca" msprop:Generator_ColumnPropNameInRow="bitacora_Marca" msprop:Generator_ColumnPropNameInTable="bitacora_MarcaColumn" msprop:Generator_ColumnVarNameInTable="columnbitacora_Marca" msprop:Generator_UserColumnName="bitacora_Marca">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bitacora_Modelo" msprop:Generator_ColumnPropNameInRow="bitacora_Modelo" msprop:Generator_ColumnPropNameInTable="bitacora_ModeloColumn" msprop:Generator_ColumnVarNameInTable="columnbitacora_Modelo" msprop:Generator_UserColumnName="bitacora_Modelo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bitacora_Proveedor" msprop:Generator_ColumnPropNameInRow="bitacora_Proveedor" msprop:Generator_ColumnPropNameInTable="bitacora_ProveedorColumn" msprop:Generator_ColumnVarNameInTable="columnbitacora_Proveedor" msprop:Generator_UserColumnName="bitacora_Proveedor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Bitacora" />
+      <xs:field xpath="mstns:Id_Ditacora" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

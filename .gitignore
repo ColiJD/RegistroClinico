@@ -1,0 +1,11 @@
+# Archivos y carpetas de Visual Studio
+.vs/
+*.vscode/
+bin/
+obj/
+
+# Archivos temporales
+*.user
+*.suo
+*.cache
+*.log
