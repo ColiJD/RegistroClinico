@@ -124,12 +124,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetReporte.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Fr_Articulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fr_Articulo.Designer.cs">
-      <DependentUpon>Fr_Articulo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Fr_Citas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,12 +148,6 @@
     <Compile Include="Fr_Login.Designer.cs">
       <DependentUpon>Fr_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fr_Marcas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fr_Marcas.Designer.cs">
-      <DependentUpon>Fr_Marcas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Fr_medicos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,12 +159,6 @@
     </Compile>
     <Compile Include="Fr_MenuUsuarios.Designer.cs">
       <DependentUpon>Fr_MenuUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Fr_Modelo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fr_Modelo.Designer.cs">
-      <DependentUpon>Fr_Modelo.cs</DependentUpon>
     </Compile>
     <Compile Include="Fr_Paciente.cs">
       <SubType>Form</SubType>
@@ -221,9 +203,6 @@
     <EmbeddedResource Include="Bitacora.resx">
       <DependentUpon>Bitacora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fr_Articulo.resx">
-      <DependentUpon>Fr_Articulo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Fr_Citas.resx">
       <DependentUpon>Fr_Citas.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,17 +215,11 @@
     <EmbeddedResource Include="Fr_Login.resx">
       <DependentUpon>Fr_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fr_Marcas.resx">
-      <DependentUpon>Fr_Marcas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Fr_medicos.resx">
       <DependentUpon>Fr_medicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fr_MenuUsuarios.resx">
       <DependentUpon>Fr_MenuUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Fr_Modelo.resx">
-      <DependentUpon>Fr_Modelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fr_Paciente.resx">
       <DependentUpon>Fr_Paciente.cs</DependentUpon>

@@ -15,6 +15,9 @@ namespace BitacoraLeo
 	{
 		Conexion clConexion = new Conexion();
 		Funciones funciones = new Funciones();
+		// ✅ Variable global para usar en todo el form
+		private int historialID = 0;
+
 		Data Data = new Data();
 
 		public Fr_HistorialClinico()
@@ -27,6 +30,7 @@ namespace BitacoraLeo
 			CargarPacientes();
 			CargarMedicos();
 			MostrarHistorial();
+			
 		}
 		private void CargarPacientes()
 		{
@@ -319,6 +323,222 @@ namespace BitacoraLeo
 				txtDiagnostico.Text = dgvGrip.CurrentRow.Cells["diagnostico"].Value.ToString();
 				txtSintomas.Text = dgvGrip.CurrentRow.Cells["sintomas"].Value.ToString();
 				txtNotas.Text = dgvGrip.CurrentRow.Cells["notas"].Value.ToString();
+			}
+		}
+
+		private void btnAddTrata_Click(object sender, EventArgs e)
+		{
+			errorProviderGenerico.Clear();
+
+			if (funciones.CamposVacios(txtMedicamentos, txtDuracion,txtDosis))
+			{
+				if (string.IsNullOrWhiteSpace(txtMedicamentos.Text))
+					errorProviderGenerico.SetError(txtMedicamentos, "El medicamento no puede estar vacío.");
+				if (string.IsNullOrWhiteSpace(txtDosis.Text))
+					errorProviderGenerico.SetError(txtDosis, "La dosis no pueden estar vacíos.");
+				if (string.IsNullOrWhiteSpace(txtDuracion.Text))
+					errorProviderGenerico.SetError(txtDuracion, "La duracion no pueden estar vacíos.");
+				if (string.IsNullOrWhiteSpace(txtCodigo.Text))
+					errorProviderGenerico.SetError(txtCodigo, "El id historico no pueden estar vacíos.");
+
+				MessageBox.Show("Error... No puede insertar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
+			try
+			{
+				clConexion.abrir();
+
+				// Validar duplicado por historialID
+				if (!string.IsNullOrWhiteSpace(txtIdTratamiento.Text))
+				{
+					SqlCommand validar = new SqlCommand("SELECT COUNT(*) FROM Tratamientos WHERE tratamientoID=@id", clConexion.sconexion);
+					validar.Parameters.AddWithValue("@id", Convert.ToInt32(txtIdTratamiento.Text));
+					int existe = (int)validar.ExecuteScalar();
+					if (existe > 0)
+					{
+						MessageBox.Show("Ya existe un tratamiento con ese ID.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+						return;
+					}
+				}
+
+				using (var cmd = new SqlCommand(
+					@"INSERT INTO Tratamientos (historialID, medicamento, dosis, duracion, observaciones) 
+                      VALUES (@historialID, @medicamento, @dosis, @duracion, @observaciones)", clConexion.sconexion))
+				{
+					cmd.Parameters.AddWithValue("@historialID",txtCodigo.Text);
+					cmd.Parameters.AddWithValue("@medicamento", txtMedicamentos.Text);
+					cmd.Parameters.AddWithValue("@dosis", txtDosis.Text);
+					cmd.Parameters.AddWithValue("@duracion", txtDuracion.Text);
+					cmd.Parameters.AddWithValue("@observaciones", txtObservacion.Text);
+
+					cmd.ExecuteNonQuery();
+					MessageBox.Show("Tratamiento agregado exitosamente.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					funciones.LimpiarCampos(txtDiagnostico, txtSintomas, txtNotas, txtCodigo);
+					funciones.LimpiarComboBox(cbPaciente, cbMedico);
+					funciones.LimpiarCampos(txtCodigo, txtIdTratamiento, txtDosis, txtDuracion, txtObservacion, txtMedicamentos);
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error al agregar historial... " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			finally
+			{
+				clConexion.cerrar();
+				funciones.LimpiarCampos(txtDiagnostico, txtSintomas, txtNotas, txtCodigo);
+				funciones.LimpiarComboBox(cbPaciente, cbMedico);
+				MostrarTratamientosPorHistorial(historialID);
+				funciones.LimpiarCampos(txtCodigo, txtIdTratamiento, txtDosis, txtDuracion, txtObservacion, txtMedicamentos);
+			}
+		}
+
+		private void btnUpTrata_Click(object sender, EventArgs e)
+		{
+			
+				errorProviderGenerico.Clear();
+
+				if (string.IsNullOrWhiteSpace(txtIdTratamiento.Text))
+				{
+					errorProviderGenerico.SetError(txtIdTratamiento, "Debe seleccionar un tratamiento para modificar.");
+					MessageBox.Show("Error... Seleccione un tratamietno para modificar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
+
+				DialogResult confirmacion = MessageBox.Show("¿Está seguro que desea modificar este historial?", "Confirmar modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+				if (confirmacion != DialogResult.Yes) return;
+
+				try
+				{
+					clConexion.abrir();
+
+					using (var cmd = new SqlCommand(
+						@"UPDATE Tratamientos 
+                      SET historialID=@historialID, medicamento=@medicamento, dosis=@dosis, 
+                          duracion=@duracion, observaciones=@observaciones
+                      WHERE tratamientoID=@tratamientoID", clConexion.sconexion))
+					{
+						cmd.Parameters.AddWithValue("@tratamientoID", Convert.ToInt32(txtIdTratamiento.Text));
+						cmd.Parameters.AddWithValue("@historialID", Convert.ToInt32(txtCodigo.Text));
+					cmd.Parameters.AddWithValue("@medicamento", txtMedicamentos.Text);
+					cmd.Parameters.AddWithValue("@dosis", txtDosis.Text);
+						cmd.Parameters.AddWithValue("@duracion", txtDuracion.Text);
+						cmd.Parameters.AddWithValue("@observaciones", txtObservacion.Text);
+
+						cmd.ExecuteNonQuery();
+						MessageBox.Show("Tratamiento modificado exitosamente.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+					funciones.LimpiarCampos(txtDiagnostico, txtSintomas, txtNotas, txtCodigo);
+					funciones.LimpiarComboBox(cbPaciente, cbMedico);
+					funciones.LimpiarCampos(txtCodigo, txtIdTratamiento, txtDosis, txtDuracion, txtObservacion, txtMedicamentos);
+				}
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Error al modificar historial... " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+				finally
+				{
+					clConexion.cerrar();
+				funciones.LimpiarCampos(txtDiagnostico, txtSintomas, txtNotas, txtCodigo);
+				funciones.LimpiarComboBox(cbPaciente, cbMedico);
+				MostrarTratamientosPorHistorial(historialID);
+				funciones.LimpiarCampos(txtCodigo, txtIdTratamiento, txtDosis, txtDuracion, txtObservacion, txtMedicamentos);
+			}
+			}
+
+		private void btnDeTrata_Click(object sender, EventArgs e)
+		{
+				errorProviderGenerico.Clear();
+
+				if (string.IsNullOrWhiteSpace(txtIdTratamiento.Text))
+				{
+					errorProviderGenerico.SetError(txtCodigo, "Debe seleccionar un tratamiento para eliminar.");
+					MessageBox.Show("Error... Seleccione un tratamiento para eliminar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
+
+				DialogResult confirmacion = MessageBox.Show("¿Desea eliminar este tratamiento?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+				if (confirmacion != DialogResult.Yes) return;
+
+				try
+				{
+					clConexion.abrir();
+
+					using (var cmd = new SqlCommand("DELETE FROM Tratamientos WHERE tratamientoID=@tratamientoID", clConexion.sconexion))
+					{
+						cmd.Parameters.AddWithValue("@tratamientoID", Convert.ToInt32(txtCodigo.Text));
+						cmd.ExecuteNonQuery();
+					}
+
+					MessageBox.Show("Tratamietno eliminado.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				funciones.LimpiarCampos(txtDiagnostico, txtSintomas, txtNotas, txtCodigo);
+				funciones.LimpiarComboBox(cbPaciente, cbMedico);
+				funciones.LimpiarCampos(txtCodigo, txtIdTratamiento, txtDosis, txtDuracion, txtObservacion, txtMedicamentos);
+			}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Error al eliminar tratamiento... " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+				finally
+				{
+					clConexion.cerrar();
+				funciones.LimpiarCampos(txtDiagnostico, txtSintomas, txtNotas, txtCodigo);
+				funciones.LimpiarComboBox(cbPaciente, cbMedico);
+				MostrarTratamientosPorHistorial(historialID);
+				funciones.LimpiarCampos(txtCodigo, txtIdTratamiento, txtDosis, txtDuracion, txtObservacion, txtMedicamentos);
+			}
+			}
+		private void MostrarTratamientosPorHistorial(int historialID)
+		{
+			try
+			{
+				clConexion.abrir();
+
+				string query = @"SELECT t.tratamientoID,t.historialID, t.medicamento, t.dosis, 
+                                t.duracion, t.observaciones
+                         FROM Tratamientos t
+                         WHERE t.historialID = @historialID";
+
+				SqlDataAdapter da = new SqlDataAdapter(query, clConexion.sconexion);
+				da.SelectCommand.Parameters.AddWithValue("@historialID", historialID);
+
+				DataTable dt = new DataTable();
+				da.Fill(dt);
+
+				dgvTratamiento.DataSource = dt;
+			}
+			finally
+			{
+				clConexion.cerrar();
+			}
+		}
+
+		private void txtCodigo_TextChanged(object sender, EventArgs e)
+		{
+			if (int.TryParse(txtCodigo.Text, out int id))
+			{
+				historialID = id; // guardamos el valor en la variable global
+				MostrarTratamientosPorHistorial(historialID);
+			}
+			else
+			{
+				historialID = 0;
+				dgvTratamiento.DataSource = null;
+			}
+		}
+
+		private void dgvTratamiento_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
+			{
+				if (dgvTratamiento.CurrentRow == null) return;
+
+				txtIdTratamiento.Text = dgvTratamiento.CurrentRow.Cells["tratamientoID"].Value.ToString();
+				txtCodigo.Text = dgvTratamiento.CurrentRow.Cells["historialID"].Value.ToString();
+				txtMedicamentos.Text = dgvTratamiento.CurrentRow.Cells["medicamento"].Value.ToString();
+				txtDosis.Text = dgvTratamiento.CurrentRow.Cells["dosis"].Value.ToString();
+				txtDuracion.Text = dgvTratamiento.CurrentRow.Cells["duracion"].Value.ToString();
+				txtObservacion.Text = dgvTratamiento.CurrentRow.Cells["observaciones"].Value.ToString();
 			}
 		}
 	}

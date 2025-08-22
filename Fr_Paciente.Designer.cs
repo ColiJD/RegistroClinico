@@ -64,10 +64,10 @@
 			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEliminar.ForeColor = System.Drawing.Color.White;
-			this.btnEliminar.Location = new System.Drawing.Point(397, 565);
+			this.btnEliminar.Location = new System.Drawing.Point(338, 565);
 			this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(150, 77);
+			this.btnEliminar.Size = new System.Drawing.Size(150, 50);
 			this.btnEliminar.TabIndex = 62;
 			this.btnEliminar.Text = "Eliminar";
 			this.btnEliminar.UseVisualStyleBackColor = false;
@@ -79,10 +79,10 @@
 			this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnModificar.ForeColor = System.Drawing.Color.White;
-			this.btnModificar.Location = new System.Drawing.Point(210, 565);
+			this.btnModificar.Location = new System.Drawing.Point(180, 565);
 			this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnModificar.Name = "btnModificar";
-			this.btnModificar.Size = new System.Drawing.Size(150, 77);
+			this.btnModificar.Size = new System.Drawing.Size(150, 50);
 			this.btnModificar.TabIndex = 61;
 			this.btnModificar.Text = "Modificar";
 			this.btnModificar.UseVisualStyleBackColor = false;
@@ -155,7 +155,7 @@
 			this.btnAgregar.Location = new System.Drawing.Point(22, 565);
 			this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnAgregar.Name = "btnAgregar";
-			this.btnAgregar.Size = new System.Drawing.Size(150, 77);
+			this.btnAgregar.Size = new System.Drawing.Size(150, 50);
 			this.btnAgregar.TabIndex = 55;
 			this.btnAgregar.Text = "Agregar";
 			this.btnAgregar.UseVisualStyleBackColor = false;

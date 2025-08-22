@@ -50,31 +50,46 @@
 			this.txtNotas = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.errorProviderGenerico = new System.Windows.Forms.ErrorProvider(this.components);
+			this.label10 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label12 = new System.Windows.Forms.Label();
+			this.txtObservacion = new System.Windows.Forms.TextBox();
+			this.label13 = new System.Windows.Forms.Label();
+			this.btnDeTrata = new System.Windows.Forms.Button();
+			this.btnUpTrata = new System.Windows.Forms.Button();
+			this.btnAddTrata = new System.Windows.Forms.Button();
+			this.dgvTratamiento = new System.Windows.Forms.DataGridView();
+			this.txtDuracion = new System.Windows.Forms.TextBox();
+			this.txtDosis = new System.Windows.Forms.TextBox();
+			this.txtMedicamentos = new System.Windows.Forms.TextBox();
+			this.txtIdTratamiento = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvGrip)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.errorProviderGenerico)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTratamiento)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// txtDiagnostico
 			// 
 			this.txtDiagnostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtDiagnostico.Location = new System.Drawing.Point(215, 266);
+			this.txtDiagnostico.Location = new System.Drawing.Point(225, 266);
 			this.txtDiagnostico.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.txtDiagnostico.MaximumSize = new System.Drawing.Size(1078, 41);
 			this.txtDiagnostico.Multiline = true;
 			this.txtDiagnostico.Name = "txtDiagnostico";
-			this.txtDiagnostico.Size = new System.Drawing.Size(342, 41);
+			this.txtDiagnostico.Size = new System.Drawing.Size(332, 41);
 			this.txtDiagnostico.TabIndex = 121;
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(28, 274);
+			this.label3.Location = new System.Drawing.Point(28, 586);
 			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(179, 33);
+			this.label3.Size = new System.Drawing.Size(201, 33);
 			this.label3.TabIndex = 120;
-			this.label3.Text = "Diagnostico";
+			this.label3.Text = "Medicamento";
 			// 
 			// btnEliminar
 			// 
@@ -82,10 +97,10 @@
 			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEliminar.ForeColor = System.Drawing.Color.White;
-			this.btnEliminar.Location = new System.Drawing.Point(407, 565);
+			this.btnEliminar.Location = new System.Drawing.Point(347, 436);
 			this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(150, 77);
+			this.btnEliminar.Size = new System.Drawing.Size(150, 50);
 			this.btnEliminar.TabIndex = 119;
 			this.btnEliminar.Text = "Eliminar";
 			this.btnEliminar.UseVisualStyleBackColor = false;
@@ -97,10 +112,10 @@
 			this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnModificar.ForeColor = System.Drawing.Color.White;
-			this.btnModificar.Location = new System.Drawing.Point(220, 565);
+			this.btnModificar.Location = new System.Drawing.Point(189, 436);
 			this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnModificar.Name = "btnModificar";
-			this.btnModificar.Size = new System.Drawing.Size(150, 77);
+			this.btnModificar.Size = new System.Drawing.Size(150, 50);
 			this.btnModificar.TabIndex = 118;
 			this.btnModificar.Text = "Modificar";
 			this.btnModificar.UseVisualStyleBackColor = false;
@@ -112,10 +127,10 @@
 			this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnAgregar.ForeColor = System.Drawing.Color.White;
-			this.btnAgregar.Location = new System.Drawing.Point(32, 565);
+			this.btnAgregar.Location = new System.Drawing.Point(31, 436);
 			this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnAgregar.Name = "btnAgregar";
-			this.btnAgregar.Size = new System.Drawing.Size(150, 77);
+			this.btnAgregar.Size = new System.Drawing.Size(150, 50);
 			this.btnAgregar.TabIndex = 117;
 			this.btnAgregar.Text = "Agregar";
 			this.btnAgregar.UseVisualStyleBackColor = false;
@@ -124,12 +139,12 @@
 			// txtBuscar
 			// 
 			this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBuscar.Location = new System.Drawing.Point(587, 79);
+			this.txtBuscar.Location = new System.Drawing.Point(707, 81);
 			this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.txtBuscar.MaximumSize = new System.Drawing.Size(448, 36);
 			this.txtBuscar.Multiline = true;
 			this.txtBuscar.Name = "txtBuscar";
-			this.txtBuscar.Size = new System.Drawing.Size(448, 36);
+			this.txtBuscar.Size = new System.Drawing.Size(393, 36);
 			this.txtBuscar.TabIndex = 116;
 			this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
 			// 
@@ -137,7 +152,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(581, 37);
+			this.label2.Location = new System.Drawing.Point(587, 84);
 			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(112, 33);
@@ -157,7 +172,7 @@
 			this.dgvGrip.Name = "dgvGrip";
 			this.dgvGrip.ReadOnly = true;
 			this.dgvGrip.RowHeadersWidth = 62;
-			this.dgvGrip.Size = new System.Drawing.Size(513, 514);
+			this.dgvGrip.Size = new System.Drawing.Size(513, 284);
 			this.dgvGrip.TabIndex = 114;
 			this.dgvGrip.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrip_CellContentClick);
 			this.dgvGrip.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrip_CellDoubleClick);
@@ -236,6 +251,7 @@
 			this.txtCodigo.Name = "txtCodigo";
 			this.txtCodigo.Size = new System.Drawing.Size(387, 41);
 			this.txtCodigo.TabIndex = 107;
+			this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
 			// 
 			// label1
 			// 
@@ -263,12 +279,12 @@
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(28, 327);
+			this.label4.Location = new System.Drawing.Point(28, 639);
 			this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(145, 33);
+			this.label4.Size = new System.Drawing.Size(94, 33);
 			this.label4.TabIndex = 122;
-			this.label4.Text = "Sintomas";
+			this.label4.Text = "Dosis";
 			// 
 			// txtNotas
 			// 
@@ -285,22 +301,210 @@
 			// 
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.Location = new System.Drawing.Point(28, 378);
+			this.label8.Location = new System.Drawing.Point(28, 690);
 			this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(96, 33);
+			this.label8.Size = new System.Drawing.Size(140, 33);
 			this.label8.TabIndex = 124;
-			this.label8.Text = "Notas";
+			this.label8.Text = "Duracion";
 			// 
 			// errorProviderGenerico
 			// 
 			this.errorProviderGenerico.ContainerControl = this;
 			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.Location = new System.Drawing.Point(209, 532);
+			this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(182, 33);
+			this.label10.TabIndex = 128;
+			this.label10.Text = "Tratamiento";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(28, 378);
+			this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(96, 33);
+			this.label9.TabIndex = 133;
+			this.label9.Text = "Notas";
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label11.Location = new System.Drawing.Point(28, 327);
+			this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(145, 33);
+			this.label11.TabIndex = 131;
+			this.label11.Text = "Sintomas";
+			// 
+			// label12
+			// 
+			this.label12.AutoSize = true;
+			this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label12.Location = new System.Drawing.Point(28, 274);
+			this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(179, 33);
+			this.label12.TabIndex = 129;
+			this.label12.Text = "Diagnostico";
+			// 
+			// txtObservacion
+			// 
+			this.txtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtObservacion.Location = new System.Drawing.Point(237, 733);
+			this.txtObservacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.txtObservacion.MaximumSize = new System.Drawing.Size(1078, 41);
+			this.txtObservacion.Multiline = true;
+			this.txtObservacion.Name = "txtObservacion";
+			this.txtObservacion.Size = new System.Drawing.Size(320, 41);
+			this.txtObservacion.TabIndex = 136;
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label13.Location = new System.Drawing.Point(28, 741);
+			this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(200, 33);
+			this.label13.TabIndex = 135;
+			this.label13.Text = "Observacion ";
+			// 
+			// btnDeTrata
+			// 
+			this.btnDeTrata.BackColor = System.Drawing.Color.Blue;
+			this.btnDeTrata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnDeTrata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDeTrata.ForeColor = System.Drawing.Color.White;
+			this.btnDeTrata.Location = new System.Drawing.Point(347, 797);
+			this.btnDeTrata.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btnDeTrata.Name = "btnDeTrata";
+			this.btnDeTrata.Size = new System.Drawing.Size(150, 50);
+			this.btnDeTrata.TabIndex = 139;
+			this.btnDeTrata.Text = "Eliminar";
+			this.btnDeTrata.UseVisualStyleBackColor = false;
+			this.btnDeTrata.Click += new System.EventHandler(this.btnDeTrata_Click);
+			// 
+			// btnUpTrata
+			// 
+			this.btnUpTrata.BackColor = System.Drawing.Color.Blue;
+			this.btnUpTrata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnUpTrata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnUpTrata.ForeColor = System.Drawing.Color.White;
+			this.btnUpTrata.Location = new System.Drawing.Point(189, 797);
+			this.btnUpTrata.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btnUpTrata.Name = "btnUpTrata";
+			this.btnUpTrata.Size = new System.Drawing.Size(150, 50);
+			this.btnUpTrata.TabIndex = 138;
+			this.btnUpTrata.Text = "Modificar";
+			this.btnUpTrata.UseVisualStyleBackColor = false;
+			this.btnUpTrata.Click += new System.EventHandler(this.btnUpTrata_Click);
+			// 
+			// btnAddTrata
+			// 
+			this.btnAddTrata.BackColor = System.Drawing.Color.Blue;
+			this.btnAddTrata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAddTrata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAddTrata.ForeColor = System.Drawing.Color.White;
+			this.btnAddTrata.Location = new System.Drawing.Point(31, 797);
+			this.btnAddTrata.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btnAddTrata.Name = "btnAddTrata";
+			this.btnAddTrata.Size = new System.Drawing.Size(150, 50);
+			this.btnAddTrata.TabIndex = 137;
+			this.btnAddTrata.Text = "Agregar";
+			this.btnAddTrata.UseVisualStyleBackColor = false;
+			this.btnAddTrata.Click += new System.EventHandler(this.btnAddTrata_Click);
+			// 
+			// dgvTratamiento
+			// 
+			this.dgvTratamiento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.dgvTratamiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvTratamiento.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			this.dgvTratamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvTratamiento.Location = new System.Drawing.Point(587, 532);
+			this.dgvTratamiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.dgvTratamiento.Name = "dgvTratamiento";
+			this.dgvTratamiento.ReadOnly = true;
+			this.dgvTratamiento.RowHeadersWidth = 62;
+			this.dgvTratamiento.Size = new System.Drawing.Size(513, 330);
+			this.dgvTratamiento.TabIndex = 140;
+			this.dgvTratamiento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTratamiento_CellDoubleClick);
+			// 
+			// txtDuracion
+			// 
+			this.txtDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDuracion.Location = new System.Drawing.Point(170, 682);
+			this.txtDuracion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.txtDuracion.MaximumSize = new System.Drawing.Size(1078, 41);
+			this.txtDuracion.Multiline = true;
+			this.txtDuracion.Name = "txtDuracion";
+			this.txtDuracion.Size = new System.Drawing.Size(387, 41);
+			this.txtDuracion.TabIndex = 143;
+			// 
+			// txtDosis
+			// 
+			this.txtDosis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDosis.Location = new System.Drawing.Point(130, 631);
+			this.txtDosis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.txtDosis.MaximumSize = new System.Drawing.Size(1078, 41);
+			this.txtDosis.Multiline = true;
+			this.txtDosis.Name = "txtDosis";
+			this.txtDosis.Size = new System.Drawing.Size(427, 41);
+			this.txtDosis.TabIndex = 142;
+			// 
+			// txtMedicamentos
+			// 
+			this.txtMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtMedicamentos.Location = new System.Drawing.Point(237, 578);
+			this.txtMedicamentos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.txtMedicamentos.MaximumSize = new System.Drawing.Size(1078, 41);
+			this.txtMedicamentos.Multiline = true;
+			this.txtMedicamentos.Name = "txtMedicamentos";
+			this.txtMedicamentos.Size = new System.Drawing.Size(320, 41);
+			this.txtMedicamentos.TabIndex = 141;
+			// 
+			// txtIdTratamiento
+			// 
+			this.txtIdTratamiento.Enabled = false;
+			this.txtIdTratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtIdTratamiento.Location = new System.Drawing.Point(34, 535);
+			this.txtIdTratamiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.txtIdTratamiento.MaximumSize = new System.Drawing.Size(30, 30);
+			this.txtIdTratamiento.MinimumSize = new System.Drawing.Size(30, 30);
+			this.txtIdTratamiento.Multiline = true;
+			this.txtIdTratamiento.Name = "txtIdTratamiento";
+			this.txtIdTratamiento.Size = new System.Drawing.Size(30, 30);
+			this.txtIdTratamiento.TabIndex = 144;
+			// 
 			// Fr_HistorialClinico
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1128, 678);
+			this.ClientSize = new System.Drawing.Size(1128, 894);
+			this.Controls.Add(this.txtIdTratamiento);
+			this.Controls.Add(this.txtDuracion);
+			this.Controls.Add(this.txtDosis);
+			this.Controls.Add(this.txtMedicamentos);
+			this.Controls.Add(this.dgvTratamiento);
+			this.Controls.Add(this.btnDeTrata);
+			this.Controls.Add(this.btnUpTrata);
+			this.Controls.Add(this.btnAddTrata);
+			this.Controls.Add(this.txtObservacion);
+			this.Controls.Add(this.label13);
+			this.Controls.Add(this.label9);
+			this.Controls.Add(this.label11);
+			this.Controls.Add(this.label12);
+			this.Controls.Add(this.label10);
 			this.Controls.Add(this.txtNotas);
 			this.Controls.Add(this.label8);
 			this.Controls.Add(this.txtSintomas);
@@ -326,6 +530,7 @@
 			this.Load += new System.EventHandler(this.Fr_HistorialClinico_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvGrip)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.errorProviderGenerico)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTratamiento)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -353,5 +558,19 @@
 		private System.Windows.Forms.TextBox txtNotas;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.ErrorProvider errorProviderGenerico;
+		private System.Windows.Forms.Button btnDeTrata;
+		private System.Windows.Forms.Button btnUpTrata;
+		private System.Windows.Forms.Button btnAddTrata;
+		private System.Windows.Forms.TextBox txtObservacion;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.DataGridView dgvTratamiento;
+		private System.Windows.Forms.TextBox txtDuracion;
+		private System.Windows.Forms.TextBox txtDosis;
+		private System.Windows.Forms.TextBox txtMedicamentos;
+		private System.Windows.Forms.TextBox txtIdTratamiento;
 	}
 }
