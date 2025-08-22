@@ -295,10 +295,10 @@
 			// 
 			// dtpNacimiento
 			// 
-			this.dtpNacimiento.Location = new System.Drawing.Point(292, 291);
-			this.dtpNacimiento.MinimumSize = new System.Drawing.Size(0, 41);
+			this.dtpNacimiento.Location = new System.Drawing.Point(292, 299);
+			this.dtpNacimiento.MinimumSize = new System.Drawing.Size(4, 21);
 			this.dtpNacimiento.Name = "dtpNacimiento";
-			this.dtpNacimiento.Size = new System.Drawing.Size(255, 41);
+			this.dtpNacimiento.Size = new System.Drawing.Size(255, 26);
 			this.dtpNacimiento.TabIndex = 76;
 			// 
 			// label9

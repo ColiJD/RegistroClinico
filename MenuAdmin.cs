@@ -136,6 +136,19 @@ namespace BitacoraLeo
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-       
-    }
+		private void btnMedicos_Click(object sender, EventArgs e)
+		{
+			OpenChildForm(new Fr_medicos());
+		}
+
+		private void btnCitas_Click(object sender, EventArgs e)
+		{
+			OpenChildForm(new Fr_Citas());
+		}
+
+		private void btnHistorial_Click(object sender, EventArgs e)
+		{
+			OpenChildForm(new Fr_HistorialClinico());
+		}
+	}
 }
